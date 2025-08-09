@@ -1,6 +1,7 @@
 package com.meradevs.msvc_users.models.dto.requests;
 
 import com.meradevs.msvc_users.models.dto.RoleDTO;
+import com.meradevs.msvc_users.validations.annotations.UniqueEmail;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -22,6 +23,7 @@ public class CreateUserDTO {
 
     @NotBlank
     @Email
+    @UniqueEmail
     private String email;
 
     @NotBlank
